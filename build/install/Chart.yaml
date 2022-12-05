@@ -1,0 +1,8 @@
+apiVersion: v2
+name: alexstorm-hcf-hub
+version: 0.1.8
+description: Front module alexstorm-hcf-hub data service
+icon: "http://alexstorm.solenopsys.org/modules/assets/alexstorm-hc-hub.svg"
+
+
+

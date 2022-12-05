@@ -1,0 +1,13 @@
+{
+  "name": "@solenopsys/sc-front-hub",
+  "version": "0.1.1",
+  "dependencies": {
+
+    "protobufjs": "^7.1.2",
+    "number-generator": "^4.0.6"
+  },
+  "scripts": {
+    "test": "node index.js",
+    "build": "tsc -p tsconfig.lib.json"
+  }
+}
