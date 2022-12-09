@@ -1,24 +1,24 @@
 {
-  "name": "front-hub",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "sc-front-hub",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "packages/fronts/front-hub/src",
+  "sourceRoot": "packages/fronts/sc-front-hub/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/fronts/front-hub",
-        "index": "packages/fronts/front-hub/src/index.html",
-        "main": "packages/fronts/front-hub/src/main.ts",
-        "polyfills": "packages/fronts/front-hub/src/polyfills.ts",
-        "tsConfig": "packages/fronts/front-hub/tsconfig.app.json",
+        "outputPath": "dist/packages/sc-front-hub",
+        "index": "packages/fronts/sc-front-hub/src/index.html",
+        "main": "packages/fronts/sc-front-hub/src/main.ts",
+        "polyfills": "packages/fronts/sc-front-hub/src/polyfills.ts",
+        "tsConfig": "packages/fronts/sc-front-hub/tsconfig.app.json",
         "assets": [
-          "packages/fronts/front-hub/src/favicon.ico",
-          "packages/fronts/front-hub/src/assets"
+          "packages/fronts/sc-front-hub/src/favicon.ico",
+          "packages/fronts/sc-front-hub/src/assets"
         ],
-        "styles": ["packages/fronts/front-hub/src/styles.css"],
+        "styles": ["packages/fronts/sc-front-hub/src/styles.css"],
         "scripts": []
       },
       "configurations": {
@@ -37,8 +37,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "packages/fronts/front-hub/src/environments/environment.ts",
-              "with": "packages/fronts/front-hub/src/environments/environment.prod.ts"
+              "replace": "packages/fronts/sc-front-hub/src/environments/environment.ts",
+              "with": "packages/fronts/sc-front-hub/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -58,10 +58,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "front-hub:build:production"
+          "browserTarget": "sc-front-hub:build:production"
         },
         "development": {
-          "browserTarget": "front-hub:build:development"
+          "browserTarget": "sc-front-hub:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,15 +69,15 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "front-hub:build"
+        "browserTarget": "sc-front-hub:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "packages/fronts/front-hub/**/*.ts",
-          "packages/fronts/front-hub/**/*.html"
+          "packages/fronts/sc-front-hub/**/*.ts",
+          "packages/fronts/sc-front-hub/**/*.html"
         ]
       }
     },
@@ -85,7 +85,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/fronts/front-hub/jest.config.ts",
+        "jestConfig": "packages/fronts/sc-front-hub/jest.config.ts",
         "passWithNoTests": true
       }
     }
