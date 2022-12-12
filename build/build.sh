@@ -19,5 +19,5 @@ build_helm(){
 
 }
 
-build_image
+#build_image
 build_helm

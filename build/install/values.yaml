@@ -7,5 +7,5 @@ service:
 
 container:
   name: nginx
-  image: registry.alexstorm.solenopsys.org/alexstorm-hcf-hub
+  image: registry.alexstorm.solenopsys.org/sc-front-hub
   pullPolicy: Always
