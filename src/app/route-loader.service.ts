@@ -57,7 +57,7 @@ export class RouteLoaderService {
         let first=strings[1]
         console.log("FIRST",first)
         if(first!="" && !this.loaded[first]){
-          let path = "alexstorm/"+first;
+          let path = "richteri/"+first;
 
 
           let cluster = this.store.selectSnapshot(ClusterState.getCurrent);
@@ -85,7 +85,7 @@ export class RouteLoaderService {
 
         // const rs = staticRoutes;
         // names.forEach(name => {
-        //    rs.push(loadMod(hostUrl, name.replace("alexstorm/", ""), name)); //todo убрать этот костыль
+        //    rs.push(loadMod(hostUrl, name.replace("richteri/", ""), name)); //todo убрать этот костыль
         // });
         // this.router.resetConfig(rs);
        // console.log("ROUTE UPDATE",rs);

@@ -1,8 +1,8 @@
 apiVersion: v2
-name: alexstorm-hcf-hub
+name: richteri-hcf-hub
 version: 0.1.9
-description: Front module alexstorm-hcf-hub data service
-icon: "http://alexstorm.solenopsys.org/modules/assets/alexstorm-hc-hub.svg"
+description: Front module richteri-hcf-hub data service
+icon: "http://richteri.solenopsys.org/modules/assets/richteri-hc-hub.svg"
 
 
 

@@ -1,6 +1,6 @@
 ARCHS="linux/amd64,linux/arm64"
-REG_ADDRESS="registry.alexstorm.solenopsys.org"
-ITEM="alexstorm-hcf-hub"
+REG_ADDRESS="registry.richteri.solenopsys.org"
+ITEM="richteri-hcf-hub"
 
 build_image(){
   echo "DOCKER BUILD"
@@ -14,7 +14,7 @@ build_helm(){
 
     file=${res/Successfully packaged chart and saved it to: /}
     echo "HELM PUSH $file"
-    curl --data-binary "@$file" http://helm.alexstorm.solenopsys.org/api/charts
+    curl --data-binary "@$file" http://helm.richteri.solenopsys.org/api/charts
     rm -r tmp
 
 }

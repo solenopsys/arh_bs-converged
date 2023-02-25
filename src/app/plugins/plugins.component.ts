@@ -62,7 +62,7 @@ export class PluginsComponent implements OnInit {
       name: chart.name,
       digest: chart.digest,
       version: chart.version,
-      repository: "https://helm.alexstorm.solenopsys.org" //todo убрать это нужно исправить alexstorm-helm-lookup  там перепутаны места для репозиторий
+      repository: "https://helm.richteri.solenopsys.org" //todo убрать это нужно исправить richteri-helm-lookup  там перепутаны места для репозиторий
     }));
   }
 

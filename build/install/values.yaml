@@ -1,11 +1,11 @@
 replicasCount: 1
-fullName: "alexstorm-hcf-hub"
-selectorLabel: "alexstorm-hcf-hub"
+fullName: "richteri-hcf-hub"
+selectorLabel: "richteri-hcf-hub"
 
 service:
   httpPort: 80
 
 container:
   name: nginx
-  image: registry.alexstorm.solenopsys.org/sc-front-hub
+  image: registry.richteri.solenopsys.org/sc-front-hub
   pullPolicy: Always
