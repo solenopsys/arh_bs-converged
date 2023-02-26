@@ -3,21 +3,21 @@ import { BrowserModule } from "@angular/platform-browser";
 
 
 import { APP_BASE_HREF, CommonModule } from "@angular/common";
-import { FuiIconsModule } from "@solenopsys/uimatrix-icons";
-import { FuiNavigateModule } from "@solenopsys/uimatrix-layouts";
+import { FuiIconsModule } from "@solenopsys/ui-icons";
+import { FuiNavigateModule } from "@solenopsys/ui-layouts";
 import { HttpClientModule } from "@angular/common/http";
 import { ModulesService } from "@solenopsys/lib-globals";
 import { RouteLoaderService } from "./route-loader.service";
-import { BootstrapComponent, FuiTemplatesModule, GridState } from "@solenopsys/uimatrix-templates";
+import { BootstrapComponent, FuiTemplatesModule, GridState } from "@solenopsys/ui-templates";
 import { environment } from "../environments/environment";
 import { ClusterState } from "@solenopsys/lib-clusters";
 import { createNgxs, DataStorageModule } from "@solenopsys/lib-storage";
-import { FuiGridModule, RowsState } from "@solenopsys/uimatrix-lists";
+import { FuiGridModule, RowsState } from "@solenopsys/ui-lists";
 import { DataHstreamModule, HStreamService, HStreamsState, StreamsPool, WsPool } from "@solenopsys/lib-hyperstreams";
 import { MountModule } from "./mount.module";
 import { PluginsComponent } from "./plugins/plugins.component";
 import { LoginComponent } from "./login/login.component";
-import { FuiFormsModule } from "@solenopsys/uimatrix-forms";
+import { FuiFormsModule } from "@solenopsys/ui-forms";
 import { HelmRepositoriesState } from "@solenopsys/lib-helm";
 import { InstallationsState } from "@solenopsys/lib-installer";
 import { NGXS_PLUGINS } from "@ngxs/store";
