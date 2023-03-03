@@ -7,13 +7,13 @@ import {
   LoadRepositories,
   RemoveHelmRepository,
   Repo
-} from "@solenopsys/lib-helm";
+} from "@solenopsys/fl-helm";
 import {
   AddInstallation, DeleteInstallation,
   HelmInstallerService,
   InstallationsState,
   LoadInstallations
-} from "@solenopsys/lib-installer";
+} from "@solenopsys/fl-installer";
 import { Select, Store } from "@ngxs/store";
 import { Observable } from "rxjs";
 

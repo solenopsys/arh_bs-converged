@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
-import { ModulesService } from "@solenopsys/lib-globals";
+import { ModulesService } from "@solenopsys/fl-globals";
 import { loadRemoteModule } from "@angular-architects/module-federation";
 
 import { Select, Store } from "@ngxs/store";
-import { Cluster, ClusterState } from "@solenopsys/lib-clusters";
+import { Cluster, ClusterState } from "@solenopsys/fl-clusters";
 import { Observable } from "rxjs";
 import { LoadingComponent, staticRoutes } from "./app.module";
 import { NavigationStart, Router } from "@angular/router";

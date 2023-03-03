@@ -1,5 +1,5 @@
 import {NgModule} from "@angular/core";
-import {HStreamService, StreamsPool, WsPool} from "@solenopsys/lib-hyperstreams";
+import {HStreamService, StreamsPool, WsPool} from "@solenopsys/fl-hyperstreams";
 
 @NgModule({
   providers:[HStreamService,StreamsPool,WsPool]
