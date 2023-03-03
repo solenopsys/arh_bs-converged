@@ -3,27 +3,27 @@ import { BrowserModule } from "@angular/platform-browser";
 
 
 import { APP_BASE_HREF, CommonModule } from "@angular/common";
-import { FuiIconsModule } from "@solenopsys/ui-icons";
-import { FuiNavigateModule } from "@solenopsys/ui-layouts";
+import { UIIconsModule } from "@solenopsys/ui-icons";
+import { UILayoutsModule } from "@solenopsys/ui-layouts";
 import { HttpClientModule } from "@angular/common/http";
-import { ModulesService } from "@solenopsys/lib-globals";
+import { ModulesService } from "@solenopsys/fl-globals";
 import { RouteLoaderService } from "./route-loader.service";
-import { BootstrapComponent, FuiTemplatesModule, GridState } from "@solenopsys/ui-templates";
+import { BootstrapComponent, UITemplatesModule, GridState } from "@solenopsys/ui-templates";
 import { environment } from "../environments/environment";
-import { ClusterState } from "@solenopsys/lib-clusters";
-import { createNgxs, DataStorageModule } from "@solenopsys/lib-storage";
-import { FuiGridModule, RowsState } from "@solenopsys/ui-lists";
-import { DataHstreamModule, HStreamService, HStreamsState, StreamsPool, WsPool } from "@solenopsys/lib-hyperstreams";
+import { ClusterState } from "@solenopsys/fl-clusters";
+import { createNgxs, DataStorageModule } from "@solenopsys/fl-storage";
+import { UIListsModule, RowsState } from "@solenopsys/ui-lists";
+import { DataHstreamModule, HStreamService, HStreamsState, StreamsPool, WsPool } from "@solenopsys/fl-hyperstreams";
 import { MountModule } from "./mount.module";
 import { PluginsComponent } from "./plugins/plugins.component";
 import { LoginComponent } from "./login/login.component";
-import { FuiFormsModule } from "@solenopsys/ui-forms";
-import { HelmRepositoriesState } from "@solenopsys/lib-helm";
-import { InstallationsState } from "@solenopsys/lib-installer";
+import { UIFormsModule } from "@solenopsys/ui-forms";
+import { HelmRepositoriesState } from "@solenopsys/fl-helm";
+import { InstallationsState } from "@solenopsys/fl-installer";
 import { NGXS_PLUGINS } from "@ngxs/store";
 import { NgxsLoggerPlugin } from "@ngxs/logger-plugin";
 import { Router, RouterModule } from "@angular/router";
-import { DgraphDataProvider, DgraphDataProviderService } from "@solenopsys/lib-dgraph";
+import { DgraphDataProvider, DgraphDataProviderService } from "@solenopsys/fl-dgraph";
 
 
 export function ensureRoutesExist(
@@ -74,12 +74,12 @@ export let staticRoutes = [
 
     HttpClientModule,
     DataHstreamModule,
-    FuiIconsModule,
-    FuiNavigateModule,
+    UIIconsModule,
+    UILayoutsModule,
 
-    FuiTemplatesModule,
-    FuiGridModule,
-    FuiFormsModule
+    UITemplatesModule,
+    UIListsModule,
+    UIFormsModule
 
   ],
   providers: [WsPool,HStreamService,StreamsPool,

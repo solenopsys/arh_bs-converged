@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'front-hub',
+  displayName: 'fr-converged',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/packages/front-hub',
+  coverageDirectory: '../../coverage/packages/fr-converged',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },
