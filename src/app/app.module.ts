@@ -16,7 +16,6 @@ import { UIListsModule, RowsState } from "@solenopsys/ui-lists";
 import { DataHstreamModule, HStreamService, HStreamsState, StreamsPool, WsPool } from "@solenopsys/fl-hyperstreams";
 import { MountModule } from "./mount.module";
 import { PluginsComponent } from "./plugins/plugins.component";
-import { LoginComponent } from "./login/login.component";
 import { UIFormsModule } from "@solenopsys/ui-forms";
 import { HelmRepositoriesState } from "@solenopsys/fl-helm";
 import { InstallationsState } from "@solenopsys/fl-installer";
@@ -40,16 +39,15 @@ export function ensureRoutesExist(
 export class LoadingComponent   {
 
 
-  constructor( ) {
-  }
+
 
 
 }
 
-export let staticRoutes = [
+export const staticRoutes = [
 
  { path: "plugins", component: PluginsComponent },
- { path: "login", component: LoginComponent },
+
 
 ];
 
@@ -57,7 +55,7 @@ export let staticRoutes = [
 
 @NgModule({
   declarations: [ LoadingComponent,
-    PluginsComponent,LoginComponent,
+    PluginsComponent,
   ],
   imports: [
     BrowserModule,
