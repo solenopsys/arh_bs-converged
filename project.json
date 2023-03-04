@@ -9,7 +9,7 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/fr-converged",
+        "outputPath": "dist/fronts/fr-converged",
         "index": "packages/fronts/fr-converged/src/index.html",
         "main": "packages/fronts/fr-converged/src/main.ts",
         "polyfills": "packages/fronts/fr-converged/src/polyfills.ts",
