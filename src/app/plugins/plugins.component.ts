@@ -21,7 +21,7 @@ import { Observable } from "rxjs";
 //import {webSocket} from "rxjs/webSocket";
 
 @Component({
-  selector: "hyperconverged-plugins",
+  selector: "sc-plugins",
   templateUrl: "./plugins.component.html",
   styleUrls: ["./plugins.component.scss"],
   encapsulation: ViewEncapsulation.Emulated
