@@ -23,8 +23,10 @@ import { NGXS_PLUGINS } from "@ngxs/store";
 import { NgxsLoggerPlugin } from "@ngxs/logger-plugin";
 import { Router, RouterModule } from "@angular/router";
 import { DgraphDataProvider, DgraphDataProviderService } from "@solenopsys/fl-dgraph";
+import {Subject} from "rxjs";
 
 
+const menu$ = new Subject()
 export function ensureRoutesExist(
   http: ModulesService,
   routeLoader: RouteLoaderService
@@ -88,12 +90,13 @@ export const staticRoutes = [
       deps: [ModulesService, RouteLoaderService],
     },
     { provide: 'sc',  useValue:  DgraphDataProviderService },
-    { provide: 'single_start', useValue: false },
     {
       provide: NGXS_PLUGINS,
       useClass: NgxsLoggerPlugin,
       multi: true
     },
+    {provide: 'logo', useValue: "matrix"},
+    {provide: 'menu', useValue: menu$.asObservable()},
     {provide: APP_BASE_HREF, useValue: '/'},
     {provide: 'assets_dir', useValue: ''},
   ],

@@ -18,7 +18,9 @@
           "packages/fronts/fr-converged/src/favicon.ico",
           "packages/fronts/fr-converged/src/assets"
         ],
-        "styles": ["packages/fronts/fr-converged/src/styles.css"],
+        "styles": [
+          "packages/uimatrix/ui-templates/src/assets/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
