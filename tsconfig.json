@@ -11,6 +11,5 @@
     }
   ],
   "compilerOptions": {
-    "target": "es2022"
   }
 }
