@@ -10,7 +10,7 @@ import { ModulesService } from "@solenopsys/fl-globals";
 import { RouteLoaderService } from "./route-loader.service";
 import { BootstrapComponent, UITemplatesModule, GridState } from "@solenopsys/ui-templates";
 import { environment } from "../environments/environment";
-import { ClusterState } from "@solenopsys/fl-clusters";
+import {Cluster, ClusterState} from "@solenopsys/fl-clusters";
 import { createNgxs, DataStorageModule } from "@solenopsys/fl-storage";
 import { UIListsModule, RowsState } from "@solenopsys/ui-lists";
 import { DataHstreamModule, HStreamService, HStreamsState, StreamsPool, WsPool } from "@solenopsys/fl-hyperstreams";
@@ -24,6 +24,15 @@ import { NgxsLoggerPlugin } from "@ngxs/logger-plugin";
 import { Router, RouterModule } from "@angular/router";
 import { DgraphDataProvider, DgraphDataProviderService } from "@solenopsys/fl-dgraph";
 import {Subject} from "rxjs";
+import {map} from "rxjs/operators";
+
+
+//todo should be integrated
+// const tabs$ = clusters$.pipe(map((clusters: Cluster[]) => {
+//   return clusters?.map(item => {
+//     return {id: item.host, title: item.title};
+//   });
+// }));
 
 
 const menu$ = new Subject()
