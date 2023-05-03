@@ -18,7 +18,62 @@
         "tsConfig": "packages/fronts/fr-converged/tsconfig.app.json",
         "assets": [
           "packages/fronts/fr-converged/src/favicon.ico",
-          "packages/fronts/fr-converged/src/assets"
+          "packages/fronts/fr-converged/src/assets",
+          {
+            "input": "packages/uimatrix/ui-templates/src/assets",
+            "glob": "**/*",
+            "output": "assets"
+          },
+          {
+            "input": "packages/uimatrix/ui-icons/src/assets",
+            "glob": "**/*",
+            "output": "assets"
+          },
+          {
+            "input": "packages/uimatrix/ui-charts/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/charts"
+          },
+          {
+            "input": "packages/uimatrix/ui-controls/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/controls"
+          },
+          {
+            "input": "packages/uimatrix/ui-forms/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/forms"
+          },
+          {
+            "input": "packages/uimatrix/ui-layouts/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/layouts"
+          },
+          {
+            "input": "packages/uimatrix/ui-lists/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/lists"
+          },
+          {
+            "input": "packages/uimatrix/ui-modals/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/modals"
+          },
+          {
+            "input": "packages/uimatrix/ui-navigate/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/navigate"
+          },
+          {
+            "input": "packages/uimatrix/ui-publications/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/publications"
+          },
+          {
+            "input": "packages/uimatrix/ui-templates/src/stories",
+            "glob": "**/*",
+            "output": "assets/stories/templates"
+          }
         ],
         "styles": [
           "packages/uimatrix/ui-templates/src/assets/styles.scss"

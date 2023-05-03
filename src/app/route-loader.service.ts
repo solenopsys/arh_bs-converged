@@ -11,7 +11,7 @@ import { NavigationStart, Router } from "@angular/router";
 
 const loadMod = (host, key, path): any => {
   console.log("PATCH",path)
-  let remoteEntry = host + `/fm/modules/${path}/remoteEntry.js`;
+  const remoteEntry = host + `/fm/modules/${path}/remoteEntry.js`;
   console.log("RE",remoteEntry)
   return {
 
@@ -52,16 +52,16 @@ export class RouteLoaderService {
         console.log("URL",event.url)
         const rs = staticRoutes;
 
-        let strings = event.url.split("/");
+        const strings = event.url.split("/");
         console.log("STRINGS",strings)
-        let first=strings[1]
+        const first=strings[1]
         console.log("FIRST",first)
         if(first!="" && !this.loaded[first]){
-          let path = "richteri/"+first;
+          const path = "richteri/"+first;
 
 
-          let cluster = this.store.selectSnapshot(ClusterState.getCurrent);
-          let hostUrl = "http://" + cluster.host;
+          const cluster = this.store.selectSnapshot(ClusterState.getCurrent);
+          const hostUrl = "http://" + cluster.host;
           console.log("HOST FOR LOAD",hostUrl)
           rs.push(loadMod(hostUrl, first, path)); //todo убрать этот костыль
 
@@ -78,8 +78,8 @@ export class RouteLoaderService {
   load() {
     console.log("LOAD ROUTER START");
 
-    this.current$.subscribe(cluster => {
-      let hostUrl = "http://" + cluster.host;
+    this.current$?.subscribe(cluster => {
+      const hostUrl = "http://" + cluster.host;
       this.modulesService.loadModules(hostUrl).then((names: string[]) => {
         console.log("LOAD MODULE START", names);
 
