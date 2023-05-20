@@ -3,23 +3,22 @@ import {BrowserModule} from "@angular/platform-browser";
 
 
 import {APP_BASE_HREF, CommonModule} from "@angular/common";
-import {UIIconsModule} from "@solenopsys/ui-icons";
 import {UILayoutsModule} from "@solenopsys/ui-layouts";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {ModulesService} from "@solenopsys/fl-globals";
 import {RouteLoaderService} from "./route-loader.service";
 import {
-  BootstrapComponent,
-  UITemplatesModule,
-  GridState,
-  InterfaceState,
-  MenuState,
-  MenuLoaderService
+    BootstrapComponent,
+    GridState,
+    InterfaceState,
+    MenuLoaderService,
+    MenuState,
+    UITemplatesModule
 } from "@solenopsys/ui-templates";
 import {environment} from "../environments/environment";
-import {Cluster, ClusterState} from "@solenopsys/fl-clusters";
+import {ClusterState} from "@solenopsys/fl-clusters";
 import {createNgxs, DataStorageModule} from "@solenopsys/fl-storage";
-import {UIListsModule, RowsState} from "@solenopsys/ui-lists";
+import {RowsState, UIListsModule} from "@solenopsys/ui-lists";
 import {DataHstreamModule, HStreamService, HStreamsState, StreamsPool, WsPool} from "@solenopsys/fl-hyperstreams";
 import {MountModule} from "./mount.module";
 import {PluginsComponent} from "./plugins/plugins.component";
@@ -28,20 +27,12 @@ import {HelmRepositoriesState} from "@solenopsys/fl-helm";
 import {InstallationsState} from "@solenopsys/fl-installer";
 import {NGXS_PLUGINS, Store} from "@ngxs/store";
 import {NgxsLoggerPlugin} from "@ngxs/logger-plugin";
-import {Router, RouterModule} from "@angular/router";
-import {DgraphDataProvider, DgraphDataProviderService} from "@solenopsys/fl-dgraph";
+import {RouterModule} from "@angular/router";
 import {Subject} from "rxjs";
-import {map} from "rxjs/operators";
 import {ColorSchemesService} from "@solenopsys/ui-themes";
 import {ClustersMenuProvider} from "./cluster-menu-provider";
-
-
-//todo should be integrated
-// const tabs$ = clusters$.pipe(map((clusters: Cluster[]) => {
-//   return clusters?.map(item => {
-//     return {id: item.host, title: item.title};
-//   });
-// }));
+import {NewClusterComponent} from "./new-cluster/new-cluster";
+import {UIControlsModule} from "@solenopsys/ui-controls";
 
 
 const menu$ = new Subject()
@@ -62,16 +53,10 @@ export class LoadingComponent {
 
 }
 
-export const staticRoutes = [
-
-    {path: "plugins", component: PluginsComponent},
-
-
-];
-
 
 @NgModule({
     declarations: [LoadingComponent,
+        NewClusterComponent,
         PluginsComponent,
     ],
     imports: [
@@ -79,22 +64,27 @@ export const staticRoutes = [
         CommonModule,
 
         ...createNgxs(!environment.production, [InterfaceState,
-          MenuState, ClusterState, GridState, RowsState, HStreamsState, HelmRepositoriesState, InstallationsState], true),
+            MenuState, ClusterState, GridState, RowsState, HStreamsState, HelmRepositoriesState, InstallationsState], true),
 
         RouterModule.forRoot(
-            [...staticRoutes, {path: '**', component: LoadingComponent}]
+            [
+                {path: '', redirectTo: 'clusters', pathMatch: 'full'},
+                {path: "clusters", component: NewClusterComponent},
+                {path: "plugins", component: PluginsComponent},
+                {path: '**', component: LoadingComponent}
+            ]
         ),
         MountModule,
         DataStorageModule,
 
         HttpClientModule,
         DataHstreamModule,
-        UIIconsModule,
         UILayoutsModule,
 
         UITemplatesModule,
         UIListsModule,
-        UIFormsModule
+        UIFormsModule,
+        UIControlsModule
 
     ],
     providers: [WsPool, HStreamService, StreamsPool,
@@ -104,7 +94,6 @@ export const staticRoutes = [
             multi: true,
             deps: [ModulesService, RouteLoaderService],
         },
-        {provide: 'sc', useValue: DgraphDataProviderService},
         {
             provide: NGXS_PLUGINS,
             useClass: NgxsLoggerPlugin,
@@ -118,13 +107,12 @@ export const staticRoutes = [
     bootstrap: [BootstrapComponent],
 })
 export class AppModule {
-  constructor(
-      private http: HttpClient,
-      private store: Store, menuLoaderService: MenuLoaderService,
-      private colorService: ColorSchemesService) {
+    constructor(
+        private http: HttpClient,
+        private store: Store, menuLoaderService: MenuLoaderService,
+        private colorService: ColorSchemesService) {
 
-
-    menuLoaderService.addProvider("clusterMenuProvider", new ClustersMenuProvider( ))
-    menuLoaderService.addMapping("components", "clusterMenuProvider")
-  }
+        menuLoaderService.addProvider("clusterMenuProvider", new ClustersMenuProvider())
+        menuLoaderService.addMapping("clusters", "clusterMenuProvider")
+    }
 }
