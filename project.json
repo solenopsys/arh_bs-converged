@@ -17,7 +17,7 @@
         "polyfills": "packages/fronts/fr-converged/src/polyfills.ts",
         "tsConfig": "packages/fronts/fr-converged/tsconfig.app.json",
         "assets": [
-          "packages/fronts/fr-converged/src/favicon.ico",
+          "packages/fronts/fr-converged/src/favicon.svg",
           "packages/fronts/fr-converged/src/assets",
           {
             "input": "packages/uimatrix/ui-templates/src/assets",
@@ -105,10 +105,9 @@
         "development": {
           "buildOptimizer": false,
           "optimization": false,
-          "vendorChunk": true,
           "extractLicenses": false,
-          "sourceMap": true,
-          "namedChunks": true
+          "sourceMap": true
+
         }
       },
       "defaultConfiguration": "production"

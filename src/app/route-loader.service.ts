@@ -53,13 +53,9 @@ export class RouteLoaderService {
         const rs = staticRoutes;
 
         const strings = event.url.split("/");
-        console.log("STRINGS",strings)
         const first=strings[1]
-        console.log("FIRST",first)
         if(first!="" && !this.loaded[first]){
-          const path = "richteri/"+first;
-
-
+          const path = first;
           const cluster = this.store.selectSnapshot(ClusterState.getCurrent);
           const hostUrl = "http://" + cluster.host;
           console.log("HOST FOR LOAD",hostUrl)
@@ -76,7 +72,6 @@ export class RouteLoaderService {
   }
 
   load() {
-    console.log("LOAD ROUTER START");
 
     this.current$?.subscribe(cluster => {
       const hostUrl = "http://" + cluster.host;
