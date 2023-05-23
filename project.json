@@ -25,11 +25,6 @@
             "output": "assets"
           },
           {
-            "input": "packages/uimatrix/ui-icons/src/assets",
-            "glob": "**/*",
-            "output": "assets"
-          },
-          {
             "input": "packages/uimatrix/ui-charts/src/stories",
             "glob": "**/*",
             "output": "assets/stories/charts"
@@ -78,6 +73,7 @@
         "styles": [
           "packages/uimatrix/ui-templates/src/assets/styles.scss"
         ],
+
         "scripts": []
       },
       "configurations": {
@@ -148,6 +144,9 @@
         "jestConfig": "packages/fronts/fr-converged/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "icons": {
+      "command": "node ./packages/scripts/icons.js ./packages/uimatrix/ui-icons/src ./dist/fronts/fr-converged"
     }
   },
   "tags": []
