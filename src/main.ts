@@ -1,17 +1,5 @@
-import {environment} from "./environments/environment";
-import {enableProdMode, ViewEncapsulation} from "@angular/core";
-import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
-import {AppModule} from "./app/app.module";
+import {trailingSlash} from "@solenopsys/fl-globals";
 
-if (environment.production) {
-  enableProdMode();
-}
+trailingSlash()
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule,
-    {
-      defaultEncapsulation: ViewEncapsulation.Emulated,
-    }
-    )
-  .catch((err) => console.error(err));
-
+import('./bootstrap').catch((err) => console.error(err));

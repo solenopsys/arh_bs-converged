@@ -2,11 +2,22 @@
   "name": "@solenopsys/fr-converged",
   "version": "0.1.1",
   "dependencies": {
-    "protobufjs": "^7.1.2",
-    "number-generator": "^4.0.6"
-  },
-  "scripts": {
-    "test": "node index.js",
-    "build": "etsc"
+    "json5": "^2.2.3",
+    "number-generator": "^4.0.6",
+    "protobufjs": "^7.2.3",
+    "@solenopsys/fl-converged": "^0.1.0",
+    "@solenopsys/ui-layouts": "^0.1.0",
+    "@solenopsys/fl-globals": "^0.1.0",
+    "@solenopsys/ui-templates": "^0.1.0",
+    "@solenopsys/fl-clusters": "^0.1.0",
+    "@solenopsys/fl-storage": "^0.1.0",
+    "@solenopsys/ui-lists": "^0.1.0",
+    "@solenopsys/fl-hyperstreams": "^0.1.0",
+    "@solenopsys/ui-forms": "^0.1.0",
+    "@solenopsys/fl-helm": "^0.1.0",
+    "@solenopsys/fl-installer": "^0.1.0",
+    "@solenopsys/ui-themes": "^0.1.0",
+    "@solenopsys/ui-controls": "^0.1.0",
+    "@solenopsys/ui-navigate": "^0.1.0"
   }
 }
