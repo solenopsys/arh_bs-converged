@@ -7,8 +7,10 @@
       "sourceRoot": "src",
       "projectType": "application",
       "architect": {
+
+
         "build": {
-          "builder": "@angular-devkit/build-angular:browser-esbuild",
+          "builder": "@solenopsys/native-federation-core:build",
           "options": {
             "outputPath": "../../../dist/fronts/fr-converged",
             "index": "src/index.html",
