@@ -1,0 +1,14 @@
+{
+  "layout": {
+    "module": "@solenopsys/mf-layout",
+    "data": {
+      "navigate": {},
+      "logo": "/endpoints/solenopsys/fr-converged/assets/logo.svg",
+      "favicon": "/endpoints/solenopsys/fr-converged/assets/favicon.svg",
+      "title": "Converged vc"
+    }
+  },
+  "routes": {
+
+  }
+}
